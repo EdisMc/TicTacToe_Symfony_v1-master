@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Tic Tac Toe | Symfony v1.0{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+
+</head>
+
+<body class="d-flex flex-column wallpaper">
+
+<header>
+    <link rel="shortcut icon" href="">
+    <div class="header">
+       <a class="logo" href="/">TicTacToe</a>
+        <div class="header-right">
+            <a class="active" href="/">Home</a>
+            <a href="{{ app.user ? 'logout' : 'login' }}"
+               @click="isOpen = false">
+                {{ app.user ? 'Logout' : 'Login' }}</a>
+            <a href="/register"
+               @click="isOpen = false">Sign up</a>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    {% block body %} {% endblock %}
+</main>
+
+</body>
+</html>

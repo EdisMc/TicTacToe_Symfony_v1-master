@@ -1,0 +1,111 @@
+@import 'bootstrap';
+
+body {
+    background-color: #b2cfde;
+    background-image: url("https://previews.123rf.com/images/fillvector/fillvector2107/fillvector210710773/172055426-line-tic-tac-toe-game-icon-isolated-on-white-background-colorful-outline-concept-vector.jpg");
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #b2cfde;
+    padding: 10px 10px;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: rgba(231, 169, 169, 0.47);
+    color: black;
+}
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.header-right {
+    float: right;
+}
+
+h1 {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin-top: 30px;
+}
+
+.box-model {
+    width: 100px;
+    height: 100px;
+    font-size: 66px;
+    text-align: center;
+    color: rgba(93, 9, 9, 0.47);
+    margin-inline:auto;
+    border: 2px solid #444444;
+    background-color : rgba(134, 134, 178, 0.47);
+}
+.mt-5 {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 0;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 40px;
+}
+
+.play {
+    text-align: center;
+    font-size: 40px;
+}
+a {
+    color: darkblue;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}

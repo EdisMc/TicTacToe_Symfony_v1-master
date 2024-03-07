@@ -1,0 +1,57 @@
+{% extends '/base.html.twig' %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+    <section class="vh-100 gradient-custom"
+             style="background-image: url('https://us.123rf.com/450wm/faithie/faithie1705/faithie170500359/78967428-tic-tac-toe-game-with-line-of-targets-with-arrows-winning-concept-of-thinking-outside-the-box-and.jpg?ver=6');">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-5 mt-md-4 pb-5">
+                                <form method="post">
+                                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                                    <p class="text-white-50 mb-5">Please enter your credentials!</p>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label" for="inputEmail">Email</label>
+                                        <input type="email" value="{{ last_username }}" required id="inputEmail"
+                                               name="email" class="form-control form-control-lg"/>
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label" for="inputPassword">Password</label>
+                                        <input type="password" name="password" autocomplete="current-password" required
+                                               id="inputPassword" class="form-control form-control-lg"/>
+                                    </div>
+
+                                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="">Forgot password?</a>
+                                    </p>
+
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit"
+                                                class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                            Login
+                                        </button>
+                                    </div>
+
+                                    <div>
+                                        <p class="mb-0">Don't have an account? <a href="{{ path('app_register') }}" class="text-white-50 fw-bold">Sign Up</a>
+                                        </p>
+                                    </div>
+                                    <input type="hidden" name="_csrf_token"
+                                           value="{{ csrf_token('authenticate') }}">
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
